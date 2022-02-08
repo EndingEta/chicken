@@ -8,7 +8,7 @@ train_dataset:
   num_classes: 3
   transforms:
   - type: Resize
-    target_size: [1024, 1024]
+    target_size: [512, 512]
   - type: RandomHorizontalFlip
   - type: RandomDistort
     brightness_range: 0.4
@@ -24,7 +24,7 @@ val_dataset:
   num_classes: 3
   transforms:
   - Resize:
-    target_size: [1024, 1024]
+    target_size: [512, 512]
   - type: Normalize
   mode: val
 
