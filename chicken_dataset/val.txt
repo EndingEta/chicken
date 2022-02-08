@@ -1,0 +1,12 @@
+images/video_20211225_084844_19.jpg annotations/video_20211225_084844_19.png
+images/video_20211225_084844_71.jpg annotations/video_20211225_084844_71.png
+images/video_20211225_084844_58.jpg annotations/video_20211225_084844_58.png
+images/video_20211225_084844_56.jpg annotations/video_20211225_084844_56.png
+images/video_20211225_084844_18.jpg annotations/video_20211225_084844_18.png
+images/video_20211225_084844_10.jpg annotations/video_20211225_084844_10.png
+images/video_20211225_084844_30.jpg annotations/video_20211225_084844_30.png
+images/video_20211225_084844_25.jpg annotations/video_20211225_084844_25.png
+images/video_20211225_084844_21.jpg annotations/video_20211225_084844_21.png
+images/video_20211225_084844_2.jpg annotations/video_20211225_084844_2.png
+images/video_20211225_084844_1.jpg annotations/video_20211225_084844_1.png
+images/video_20211225_084844_17.jpg annotations/video_20211225_084844_17.png
