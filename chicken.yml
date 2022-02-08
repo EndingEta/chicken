@@ -1,16 +1,17 @@
-batch_size: 2
-iters: 80000
+batch_size: 8
+iters: 160000
 
 train_dataset:
-  type: Cityscapes
-  dataset_root: data/cityscapes
+  type: Dataset
+  dataset_root: chicken_dataset
+  train_path: chicken_dataset/train.txt
   transforms:
     - type: ResizeStepScaling
       min_scale_factor: 0.5
       max_scale_factor: 2.0
       scale_step_size: 0.25
     - type: RandomPaddingCrop
-      crop_size: [1024, 512]
+      crop_size: [1024, 1024]
     - type: RandomHorizontalFlip
     - type: RandomDistort
       brightness_range: 0.4
@@ -20,9 +21,12 @@ train_dataset:
   mode: train
 
 val_dataset:
-  type: Cityscapes
-  dataset_root: data/cityscapes
+  type: Dataset
+    dataset_root: chicken_dataset
+    val_path: chicken_dataset/val.txt
   transforms:
+    - Resize:
+        - target_size: [1024, 1024]
     - type: Normalize
   mode: val
 
@@ -32,13 +36,14 @@ optimizer:
   momentum: 0.9
   weight_decay: 4.0e-5
 
+
 lr_scheduler:
   type: PolynomialDecay
-  learning_rate: 0.01
-  end_lr: 0
+  learning_rate: 0.05
+  end_lr: 0.0
   power: 0.9
 
-loss:
-  types:
-    - type: CrossEntropyLoss
-  coef: [1]
+model:
+  type: AttentionUNet
+  pretrained: Null
+
