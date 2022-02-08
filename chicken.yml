@@ -49,3 +49,7 @@ model:
   type: AttentionUNet
   pretrained: Null
 
+loss:
+  types:
+    - type: CrossEntropyLoss
+  coef: [1]
