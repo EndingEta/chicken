@@ -5,6 +5,7 @@ train_dataset:
   type: Dataset
   dataset_root: chicken_dataset
   train_path: chicken_dataset/train.txt
+  num_classes: 3
   transforms:
   - type: ResizeStepScaling
     min_scale_factor: 0.5
@@ -24,6 +25,7 @@ val_dataset:
   type: Dataset
   dataset_root: chicken_dataset
   val_path: chicken_dataset/val.txt
+  num_classes: 3
   transforms:
   - Resize:
     target_size: [1024, 1024]
